@@ -1,0 +1,12 @@
+HaggagHub/
+├── core/
+│   ├── models/         
+│   ├── schemas/        
+│   ├── services/       
+│   └── repository/    
+├── database/
+│   └── session.py     
+├── config.py         
+|── main_test.py
+|── requirements.txt
+└── structure.txt
