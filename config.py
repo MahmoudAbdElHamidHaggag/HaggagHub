@@ -4,6 +4,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class Settings:
-    DATABASE_URL: str = os.getenv("DATABASE_URL")
-
+    LOCAL_DB_URL: str = os.getenv("LOCAL_DB_URL")
+    REMOTE_DB_URL: str = os.getenv("REMOTE_DB_URL") 
 settings = Settings()
