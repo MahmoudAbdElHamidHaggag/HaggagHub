@@ -1,12 +1,21 @@
 HaggagHub/
 ├── core/
-│   ├── models/         
-│   ├── schemas/        
-│   ├── services/       
+│   ├── models/
+|   |   |── base.py
+|   |   |── DocumentBaseModel.py
+|   |   |── master.py
+|   |   |__ __init__.py       
+│   ├── schemas/  
+|   |   |__ __init__.py      
+│   ├── services/      
+|   |   |__ __init__.py 
 │   └── repository/    
+|       |__ __init__.py
 ├── database/
+|   |── __init__.py
 │   └── session.py     
 ├── config.py         
 |── main_test.py
+|── __init__.py
 |── requirements.txt
 └── structure.txt

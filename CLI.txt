@@ -1,0 +1,34 @@
+#Create envierement python
+python -m venv .venv
+.venv\Scripts\Activate #for windows
+
+#Create file for all framwork
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
+# perpare alembic
+alembic init alembic
+alembic revision --autogenerate -m "initial_schema"
+alembic upgrade head
+
+
+# git in the first
+git init
+git add .
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git commit -m "................."
+git remote add origin https://github.com/USERNAME/REPO.git
+git branch -M ....main
+git push -u origin main
+
+# git update
+git add .
+git commit -m "..............."
+git push
+
+#git down update
+git pull
+
+
+
