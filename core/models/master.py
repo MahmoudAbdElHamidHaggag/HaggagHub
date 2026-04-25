@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Mapped, mapped_column
-from .base import AbstractBaseModel # هذا هو الأب الذي صنعناه سابقاً
+from core.models.base import AbstractBaseModel
 
 class MasterDataModel(AbstractBaseModel):
     __abstract__ = True

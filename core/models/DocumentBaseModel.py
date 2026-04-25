@@ -1,8 +1,8 @@
 import uuid
 from sqlalchemy import ForeignKey
-from sqlalchemy.dialects.postgresql import UUID # استيراد النوع الجديد
+from sqlalchemy.dialects.postgresql import UUID 
 from sqlalchemy.orm import Mapped, mapped_column
-from .base import AbstractBaseModel 
+from core.models.base import AbstractBaseModel
 
 class DocumentBaseModel(AbstractBaseModel):
     __abstract__ = True
