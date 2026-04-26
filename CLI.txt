@@ -10,6 +10,9 @@ pip install -r requirements.txt
 alembic init alembic
 alembic revision --autogenerate -m "initial_schema"
 alembic upgrade head
+alembic current
+alembic stamp head
+alembic stamp base
 
 
 # git in the first
@@ -30,5 +33,17 @@ git push
 #git down update
 git pull
 
+##postgresssql managment
+psql -U <<USER_NAME>> -d <<DATABASE_NAME>>   or    psql -U postgres  ## Open Terminal for postgresssql
+\du    ## for show all user
+ALTER USER <<USER_NAME>> WITH PASSWORD '<<Any_password>>'; ### change password for USER_NAME
+CREATE USER <<USER_NAME>> WITH PASSWORD '<<Any_password>>'; ## create new user
+ALTER DATABASE <<DATABASE_NAME>> OWNER TO <<USER_NAME>>;  OR GRANT ALL PRIVILEGES ON DATABASE <<DATABASE_NAME>> TO <<USER_NAME>>; ## give user name permission for DATABASE
+\l   ## for show all database
+CREATE DATABASE <<DATABASE_NAME>>;  ## for create or make new database
+ALTER DATABASE <<DATABASE_NAME>> OWNER TO <<USER_NAME>>; for like between database and user
+\c <<DATABASE_NAME>> ## enter to database
+\dt ## after enter to database write this command to sure and show all tabel in database
+\q  ## for Eixt
 
 

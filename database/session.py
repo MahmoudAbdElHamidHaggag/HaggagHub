@@ -1,21 +1,19 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, declarative_base
+from sqlalchemy.orm import sessionmaker
 from config import settings
 
-connect_args = {"check_same_thread": False} if "sqlite" in settings.DATABASE_URL else {}
+# SQLite (local)
+local_engine = create_engine(settings.LOCAL_DB_URL)
+LocalSession = sessionmaker(bind=local_engine)
 
-engine = create_engine(
-    settings.DATABASE_URL, 
-    connect_args=connect_args
-)
+# PostgreSQL (remote)
+remote_engine = create_engine(settings.REMOTE_DB_URL)
+RemoteSession = sessionmaker(bind=remote_engine)
 
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-Base = declarative_base()
+def get_local_db():
+    return LocalSession()
 
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
+
+def get_remote_db():
+    return RemoteSession()

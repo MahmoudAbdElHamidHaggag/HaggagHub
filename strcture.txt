@@ -1,21 +1,35 @@
-HaggagHub/
-├── core/
+HaggagHub/  
+├── core/ 
 │   ├── models/
-|   |   |── base.py
-|   |   |── DocumentBaseModel.py
-|   |   |── master.py
-|   |   |__ __init__.py       
+|   |   ├── base/
+|   |   |   ├── __init__.py
+|   |   |   ├── document_base.py
+|   |   |   └── master_base.py
+|   |   ├── entities/
+|   |   |   └── __init__.py  
+|   |   └── __init__.py       
 │   ├── schemas/  
-|   |   |__ __init__.py      
+|   |   └── __init__.py      
 │   ├── services/      
-|   |   |__ __init__.py 
-│   └── repository/    
-|       |__ __init__.py
+|   |   └── __init__.py 
+│   ├── repository/    
+|   |  └── __init__.py
+|   └── __init__.py
 ├── database/
 |   |── __init__.py
-│   └── session.py     
+|   |── base.py
+|   |── engine.py
+|   |── session.py
+|   |── init_db.py
+|   └── provisioning.py  
 ├── config.py         
-|── main_test.py
 |── __init__.py
 |── requirements.txt
-└── structure.txt
+|── structure.txt
+|── .venv
+|── alembic/
+|   |── versions/
+|   └── env.py
+|── alembic.ini 
+|── .env 
+└── .gitignore
