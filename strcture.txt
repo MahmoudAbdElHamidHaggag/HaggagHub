@@ -3,14 +3,19 @@ HaggagHub/
 │   ├── models/
 |   |   ├── base/
 |   |   |   ├── __init__.py
+|   |   |   ├── abstract_base.py
 |   |   |   ├── document_base.py
 |   |   |   └── master_base.py
 |   |   ├── entities/
+|   |   |   ├── branch.py
+|   |   |   ├── company.py
+|   |   |   ├── user.py
 |   |   |   └── __init__.py  
 |   |   └── __init__.py       
 │   ├── schemas/  
 |   |   └── __init__.py      
-│   ├── services/      
+│   ├── services/  
+|   |   ├── base_manager.py    
 |   |   └── __init__.py 
 │   ├── repository/    
 |   |  └── __init__.py
