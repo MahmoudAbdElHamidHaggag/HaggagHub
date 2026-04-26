@@ -1,8 +1,8 @@
-"""add_branch_table
+"""initial clean schema
 
-Revision ID: 25b7b01545fc
-Revises: d7696b3ffa44
-Create Date: 2026-04-23 11:55:15.339025
+Revision ID: 65b0811cf1fe
+Revises: 
+Create Date: 2026-04-26 21:37:22.548980
 
 """
 from typing import Sequence, Union
@@ -12,8 +12,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '25b7b01545fc'
-down_revision: Union[str, Sequence[str], None] = 'd7696b3ffa44'
+revision: str = '65b0811cf1fe'
+down_revision: Union[str, Sequence[str], None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 

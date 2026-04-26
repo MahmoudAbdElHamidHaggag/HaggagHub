@@ -1,6 +1,6 @@
 from sqlalchemy import String
 from sqlalchemy.orm import Mapped, mapped_column
-from database.base import AbstractBaseModel
+from core.models.base.abstract_base import AbstractBaseModel
 
 
 class User(AbstractBaseModel):

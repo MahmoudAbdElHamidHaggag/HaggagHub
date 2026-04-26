@@ -16,7 +16,7 @@ target_metadata = Base.metadata
 
 def get_db_url():
     if settings.APP_MODE == "CENTRAL":
-        return settings.REMOTE_DB_URL
+        return settings.TENANT_DB_URL_TEMPLATE
     return settings.LOCAL_DB_URL
 
 

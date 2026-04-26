@@ -13,6 +13,8 @@ alembic upgrade head
 alembic current
 alembic stamp head
 alembic stamp base
+ Remove-Item -Recurse -Force .\alembic\versions\*
+ Remove-Item -Recurse -Force .\alembic\versions
 
 
 # git in the first
