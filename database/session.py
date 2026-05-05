@@ -54,3 +54,8 @@ def get_local_db():
 
 def get_remote_db():
     return RemoteSession()
+
+
+def get_db():
+    """Get database session - uses local by default"""
+    return get_local_db()
